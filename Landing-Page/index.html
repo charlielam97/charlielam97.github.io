@@ -25,6 +25,10 @@
         /*background-position: 0 10vh;*/
       }
 
+      .banner {
+        min-height: 700px;
+      }
+
       .logo {
         width: 100px;
       }
@@ -49,11 +53,17 @@
 
       @media (max-width: 1100px) {
         .background {
-          background-size: auto 100vh;
+          background-size: contain;
           /*background-position: 50vw -33vh;*/
-          background-position: 0 0;
+          background-position: 0 50vh;
         }
 
+      }
+
+      @media (max-width: 1100px) and (orientation: landscape) {
+        .banner {
+          min-height: 500px;
+        }
       }
 
       @media (max-width: 600px) {
@@ -63,7 +73,7 @@
           height: 125%; /* To compensate for mobile browser address bar space */
           background: url('./fruit4.png') no-repeat center center fixed, linear-gradient(90deg, #D54233 0%, #E0CC4C 100%);
           background-size: auto 100%;
-          background-position: -90vw 0;
+          /*background-position: -90vw 0;*/
         }
 
       }
@@ -110,7 +120,7 @@
     <div class="pt-24">
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center text-white">
         <!--Left Col-->
-        <div style="min-height: 700px" class="flex flex-col w-full z-50 justify-center items-center text-center md:text-left">
+        <div class="banner flex flex-col w-full justify-center items-center text-center md:text-left">
           <h1 class="my-4 text-5xl font-bold leading-tight">
             Frukt på jobbet!
           </h1>
