@@ -7,7 +7,7 @@
     <title>
       Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
     </title>
-    <meta name="description" content="Simple landind page" />
+  <meta name="description" content="Simple landing page" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
@@ -17,7 +17,7 @@
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .background {
-        background: url('./fruit4.png') no-repeat, linear-gradient(90deg, #D54233 0%, #E0CC4C 100%);
+        background: url('./fruit4.webp') no-repeat, linear-gradient(90deg, #D54233 0%, #E0CC4C 100%);
         /*background: url('./DSC_0099-removebg.png'), linear-gradient(90deg, #d53369 0%, #daae51 100%);*/
         background-size: contain;
         /*background-position: 0 -33vh;*/
@@ -75,11 +75,15 @@
         .background {
           width: 100%;
           height: 125%; /* To compensate for mobile browser address bar space */
-          background: url('./fruit4.png') no-repeat center center fixed, linear-gradient(90deg, #D54233 0%, #E0CC4C 100%);
+          background: url('./fruit4.webp') no-repeat center center fixed, linear-gradient(90deg, #D54233 0%, #E0CC4C 100%);
           background-size: auto 100%;
           /*background-position: -90vw 0;*/
         }
 
+      }
+
+      #contact-float-wrapper {
+        transform: translateY(0);
       }
     </style>
   </head>
@@ -104,17 +108,20 @@
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-gray-800 p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
-              <a class="inline-block py-2 px-4 text-gray-800 font-bold no-underline" href="#">Fruktkorgar</a>
+              <a class="inline-block py-2 px-4 text-gray-800 font-bold no-underline" href="#maten">Fruktkorgar</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-gray-800 no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Hur det funkar</a>
+              <a class="inline-block text-gray-800 no-underline hover:text-gray-800 hover:underline py-2 px-4" href="#sa-funkar-det">Så funkar det</a>
+            </li>
+            <li class="mr-3 lg:hidden">
+              <a class="inline-block text-gray-800 no-underline hover:text-gray-800 hover:underline py-2 px-4" href="#contact">Kontakta oss</a>
             </li>
           </ul>
           <a
             href="#contact"
-            class="cta mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            class="cta hidden lg:inline-block mx-auto lg:mx-0 bg-yellow-400 text-gray-900 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 hover:bg-red-600 hover:text-white duration-300 ease-in-out"
           >
-            KONTAKT
+            Kontakta oss
           </a>
         </div>
       </div>
@@ -157,10 +164,10 @@
         </g>
       </svg>
     </div>
-    <section class="bg-white border-b py-8">
+    <section id="sa-funkar-det" class="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Title
+          Så funkar det
         </h1>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -207,7 +214,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-white border-b py-8">
+  <section id="maten" class="bg-white border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           MATEN
@@ -216,64 +223,55 @@
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <div class="w-full font-bold text-xl text-gray-800 px-6 mt-6">
-                FRUKTKORG BAS
+          <div class="flex-1 rounded-t rounded-b-none overflow-hidden shadow-xl border border-gray-100 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+            <a class="flex flex-col h-full no-underline hover:no-underline">
+              <div class="w-full font-bold text-xl text-gray-800 px-6 pt-6 text-center">
+                BAS
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Med basfrukter som: bananer, äpplen, päron, citrusfruker.
+              <p class="text-gray-800 text-base px-6">
+                Med basfrukter som: bananer, äpplen, päron, citrusfrukter.
               </p>
-              <img src="./DSC_0131-removebg-preview.png">
+              <div class="px-6 pb-6 mt-auto">
+                <div class="h-70 w-full overflow-hidden">
+                  <img class="w-full h-full object-cover" src="bas.webp" alt="Fruktkorg Bas" />
+                </div>
+              </div>
             </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-center">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-emerald-900 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Info
-              </button>
-            </div>
           </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <div class="w-full font-bold text-xl text-gray-800 px-6 mt-6">
+          <div class="flex-1 rounded-t rounded-b-none overflow-hidden shadow-xl border border-gray-100 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+            <a class="flex flex-col h-full no-underline hover:no-underline">
+              <div class="w-full font-bold text-xl text-gray-800 px-6 pt-6 text-center">
                 EKOLOGISK
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
+              <p class="text-gray-800 text-base px-6">
                 Vi på Fruktinvest älskar frukt!
                 Vi vet exakt vad Ni vill ha, därför erbjuder vi ekologiskt odlade frukter som Ni kan njuta av.
               </p>
-              <img src="DSC_0027-removebg-preview.png">
+              <div class="px-6 pb-6 mt-auto">
+                <div class="h-70 w-full overflow-hidden">
+                  <img class="w-full h-full object-cover" src="eko.webp" alt="Ekologisk fruktkorg" />
+                </div>
+              </div>
             </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-center">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-emerald-900 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Info
-              </button>
-            </div>
           </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <div class="w-full font-bold text-xl text-gray-800 px-6 mt-6">
-                FRUKTKORG KVANTUM
+          <div class="flex-1 rounded-t rounded-b-none overflow-hidden shadow-xl border border-gray-100 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+            <a class="flex flex-col h-full no-underline hover:no-underline">
+              <div class="w-full font-bold text-xl text-gray-800 px-6 pt-6 text-center">
+                PREMIUM
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
-                Med: bananer, äpplen, [röda/gröna] päron, citrusfruker, kiwi, vindruvor samt säsongsfrukter som plommon, clementiner, nektariner... mm.
+              <p class="text-gray-800 text-base px-6">
+                Med: bananer, äpplen, [röda/gröna] päron, citrusfrukter, kiwi, vindruvor samt säsongsfrukter som plommon, clementiner, nektariner... mm.
               </p>
-              <img src="DSC_0047-removebg-preview.png">
+              <div class="px-6 pb-6 mt-auto">
+                <div class="h-70 w-full overflow-hidden">
+                  <img class="w-full h-full object-cover" src="premium.webp" alt="Fruktkorg Premium" />
+                </div>
+              </div>
             </a>
-          </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-center">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-emerald-900 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                Info
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -286,12 +284,13 @@
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
+        <div class="flex flex-col sm:flex-row justify-center items-stretch gap-4 lg:gap-8 pt-12 my-12 sm:my-4">
+          <div class="group pricing-card flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4 min-h-[27rem] transition-all duration-300 ease-out will-change-transform hover:scale-[1.25] hover:shadow-2xl hover:z-20">
+            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-none">
+              <div class="p-8 text-3xl font-bold text-center border-b-4 border-gray-100 transition-all duration-300 group-hover:border-transparent group-hover:text-[#d54233]">
                 Bas
               </div>
+              <div class="h-1 w-full gradient my-0 py-0 rounded-t opacity-0 scale-x-75 origin-center transition-all duration-300 group-hover:opacity-100 group-hover:scale-x-100"></div>
               <ul class="w-full text-center text-sm">
                 <li class="border-b py-4">3-kilos fruktkorg 248 kr</li>
                 <li class="border-b py-4">6-kilos fruktkorg 248 kr</li>
@@ -299,37 +298,52 @@
                 <li class="border-b py-4">11-kilos fruktkorg 248 kr</li>
               </ul>
             </div>
-          </div>
-          <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="w-full p-8 text-3xl font-bold text-center">Ekologisk</div>
-              <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-              <ul class="w-full text-center text-base font-bold">
-                <li class="border-b py-4">3-kilos fruktkorg 248 kr</li>
-                <li class="border-b py-4">6-kilos fruktkorg 248 kr</li>
-                <li class="border-b py-4">9-kilos fruktkorg 248 kr</li>
-                <li class="border-b py-4">11-kilos fruktkorg 248 kr</li>
-              </ul>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden p-6">
               <div class="flex items-center justify-center">
-                <button href="#contact" class="mx-auto lg:mx-0 hover:underline gradient text-gray-800  font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <a href="#contact" class="mx-auto lg:mx-0 gradient text-gray-800 font-bold rounded-full my-2 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition-all duration-300 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
                   Beställ
-                </button>
+                </a>
               </div>
             </div>
           </div>
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Kvantum
-              </div>
+          <div class="group pricing-card flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none bg-white mt-4 min-h-[27rem] transition-all duration-300 ease-out will-change-transform hover:scale-[1.25] hover:shadow-2xl hover:z-20">
+            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-none">
+              <div class="p-8 text-3xl font-bold text-center border-b-4 border-gray-100 transition-all duration-300 group-hover:border-transparent group-hover:text-[#d54233]">Ekologisk</div>
+              <div class="h-1 w-full gradient my-0 py-0 rounded-t opacity-0 scale-x-75 origin-center transition-all duration-300 group-hover:opacity-100 group-hover:scale-x-100"></div>
               <ul class="w-full text-center text-sm">
                 <li class="border-b py-4">3-kilos fruktkorg 248 kr</li>
                 <li class="border-b py-4">6-kilos fruktkorg 248 kr</li>
                 <li class="border-b py-4">9-kilos fruktkorg 248 kr</li>
                 <li class="border-b py-4">11-kilos fruktkorg 248 kr</li>
               </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden p-6">
+              <div class="flex items-center justify-center">
+                <a href="#contact" class="mx-auto lg:mx-0 gradient text-gray-800 font-bold rounded-full my-2 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition-all duration-300 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
+                  Beställ
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="group pricing-card flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-r-lg bg-white mt-4 min-h-[27rem] transition-all duration-300 ease-out will-change-transform hover:scale-[1.25] hover:shadow-2xl hover:z-20">
+            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-none">
+              <div class="p-8 text-3xl font-bold text-center border-b-4 border-gray-100 transition-all duration-300 group-hover:border-transparent group-hover:text-[#d54233]">
+                Premium
+              </div>
+              <div class="h-1 w-full gradient my-0 py-0 rounded-t opacity-0 scale-x-75 origin-center transition-all duration-300 group-hover:opacity-100 group-hover:scale-x-100"></div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">3-kilos fruktkorg 248 kr</li>
+                <li class="border-b py-4">6-kilos fruktkorg 248 kr</li>
+                <li class="border-b py-4">9-kilos fruktkorg 248 kr</li>
+                <li class="border-b py-4">11-kilos fruktkorg 248 kr</li>
+              </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden p-6">
+              <div class="flex items-center justify-center">
+                <a href="#contact" class="mx-auto lg:mx-0 gradient text-gray-800 font-bold rounded-full my-2 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition-all duration-300 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
+                  Beställ
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -357,46 +371,63 @@
         </g>
       </g>
     </svg>
-    <section id="contact" class="container mx-auto text-center py-10 mb-12">
-      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-900">
-        Kontakt
-      </h1>
-      <!-- <h3 class="my-4 text-3xl leading-tight">
-        Main Hero Message to sell yourself!
-      </h3> -->
-      <div class="w-full md:w-1/3 flex mx-auto flex-col px-2 rounded-2xl border bg-white shadow">
-        <div class="mx-auto">
-          <div class="w-full inline-flex items-center font-bold text-gray-800 text-xl md:text-xl mb-3 mt-3">
-            <svg style="width:24px;height:24px" class="mr-3 h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
-            <a href="tel:070-8478837">070-8478837</a>
-          </div>
-          <div class="w-full inline-flex items-center font-bold text-gray-800 text-xl md:text-xl mb-3">
-            <svg style="width:24px;height:24px" class="mr-3 h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
-            <a href="mailto:info@fruktinvest.se?subject=jag vill ha frukt&body=Jag vill ha mer frukt">info@fruktinvest.se</a>
-          </div>
-          <div class="w-full inline-flex items-center font-bold text-gray-800 text-xl md:text-xl mb-3">
-            <svg style="width:24px;height:24px" class="mr-3 h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
-            Fruktinvest.se
-          </div>
+    <section id="contact" class="bg-gradient-to-r from-[#ffe3d6] via-white to-[#fff5cc] py-16 mb-12">
+      <div class="container mx-auto text-center px-4">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-900 mb-4">
+          Kontakt
+        </h1>
+        <div class="mx-auto mb-10 h-1 w-24 rounded-full bg-[#f3b042]"></div>
+        <div class="w-full max-w-xl mx-auto flex flex-col gap-5 px-8 py-10 rounded-3xl border border-[#f7c948] bg-white/95 shadow-xl backdrop-blur">
+          <a class="group flex items-center gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-6 py-5 text-left font-bold text-gray-800 text-xl sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="tel:070-8478837">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
+              <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
+            </span>
+            <span>070-8478837</span>
+          </a>
+          <a class="group flex items-center gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-6 py-5 text-left font-bold text-gray-800 text-xl sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="mailto:info@fruktinvest.se?subject=jag vill ha frukt&body=Jag vill ha mer frukt">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
+              <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
+            </span>
+            <span>info@fruktinvest.se</span>
+          </a>
+          <a class="group flex items-center gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-6 py-5 text-left font-bold text-gray-800 text-xl sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="https://www.facebook.com/profile.php?id=100066737714415" target="_blank" rel="noopener noreferrer">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
+              <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+            </span>
+            <span>Fruktinvest.se</span>
+          </a>
         </div>
       </div>
-      <!-- <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-        Action!
-      </button> -->
     </section>
     <!--Footer-->
-    <footer class="bg-white">
-      <div class="container mx-auto px-8">
-        <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 mt-6">
-            <img class="inline-flex items-center no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-gray-800" href="#">
-              <img class="logo svg" src="./b_85416_design_1_1.svg">
-              <small>FRUKTINVEST</small>
-            </a>
+    <footer class="bg-gradient-to-r from-white via-[#fff8ed] to-white">
+      <div class="container mx-auto px-8 py-10">
+        <div class="flex flex-col items-center gap-4">
+          <div class="flex flex-col items-center gap-3">
+            <img class="logo svg w-20" src="./b_85416_design_1_1.svg" alt="Fruktinvest logotyp">
+            <!-- <span class="text-gray-700 tracking-[0.4em] text-xs font-semibold uppercase text-center w-20">Fruktinvest</span> -->
+            <span class="text-gray-700 text-xs font-semibold uppercase text-center inline-block"
+                  style="letter-spacing: 0.4em; margin-right: -0.4em;">
+              Fruktinvest
+            </span>
           </div>
+          <div class="h-px w-24 bg-[#f7c948]/60"></div>
+          <p class="text-sm text-gray-500 text-center">© <span id="year"></span> Fruktinvest. Alla rättigheter förbehållna.</p>
         </div>
       </div>
     </footer>
+      <div
+        id="contact-float-wrapper"
+        class="fixed bottom-6 inset-x-0 flex justify-center z-40 opacity-0 pointer-events-none transition-opacity duration-500 ease-out"
+      >
+        <button
+          id="contact-float"
+          type="button"
+          class="transform rounded-full bg-[#d54233] text-white font-semibold px-6 py-3 shadow-2xl transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f3b042] pointer-events-auto"
+        >
+          Kontakta oss nu
+        </button>
+      </div>
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -406,14 +437,15 @@
       integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
     <script src="inlineSVG.min.js"></script>
     <script>
-    inlineSVG.init({
-      svgSelector: 'img.svg', // the class attached to all images that should be inlined
-      initClass: 'js-inlinesvg', // class added to <html>
-    }, function () {
-      console.log('All SVGs inlined');
-    });
+      inlineSVG.init({
+        svgSelector: 'img.svg', // the class attached to all images that should be inlined
+        initClass: 'js-inlinesvg', // class added to <html>
+      }, function () {
+        console.log('All SVGs inlined');
+      });
     </script>
     <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
       var navcontent = document.getElementById("nav-content");
@@ -466,6 +498,147 @@
           scrollTop: $("#contact").offset().top - 100
         }, 1500, 'easeInOutQuad');
       });
+    </script>
+    <script>
+      (function () {
+        var contactWrapper = document.getElementById('contact-float-wrapper');
+        var contactBtn = document.getElementById('contact-float');
+        var contactSection = document.getElementById('contact');
+        if (!contactWrapper || !contactBtn) {
+          return;
+        }
+
+        var supportsAnimate = typeof contactWrapper.animate === 'function';
+        var isVisible = false;
+        var isPointerNearBottom = false;
+        var scrollTimer = null;
+        var delay = 5000;
+        var proximityThreshold = 140;
+        var bounceTimeout = null;
+        var bounceKeyframes = supportsAnimate
+          ? [
+              { transform: 'translateY(0)' },
+              { transform: 'translateY(-16px)' },
+              { transform: 'translateY(0)' }
+            ]
+          : null;
+
+        var clearBounceTimeout = function () {
+          if (bounceTimeout) {
+            clearTimeout(bounceTimeout);
+            bounceTimeout = null;
+          }
+        };
+
+        var triggerBounce = function () {
+          if (!supportsAnimate || isPointerNearBottom || !isVisible) {
+            return;
+          }
+
+          contactWrapper.style.transform = 'translateY(0)';
+          var bounce = contactWrapper.animate(bounceKeyframes, {
+            duration: 1000,
+            easing: 'ease-in-out',
+            iterations: 1
+          });
+
+          bounce.onfinish = function () {
+            contactWrapper.style.transform = 'translateY(0)';
+            bounceTimeout = setTimeout(triggerBounce, 100);
+          };
+
+          bounce.oncancel = function () {
+            contactWrapper.style.transform = 'translateY(0)';
+          };
+        };
+
+        var showButton = function () {
+          if (isVisible) {
+            return;
+          }
+          isVisible = true;
+          contactWrapper.classList.add('opacity-100', 'pointer-events-auto');
+          contactWrapper.classList.remove('opacity-0', 'pointer-events-none');
+          contactWrapper.style.transform = 'translateY(0)';
+          clearBounceTimeout();
+          if (supportsAnimate && !isPointerNearBottom) {
+            bounceTimeout = setTimeout(triggerBounce, 100);
+          }
+        };
+
+        var hideButton = function () {
+          if (!isVisible) {
+            return;
+          }
+          isVisible = false;
+          contactWrapper.classList.add('opacity-0', 'pointer-events-none');
+          contactWrapper.classList.remove('opacity-100', 'pointer-events-auto');
+          contactWrapper.style.transform = 'translateY(0)';
+          clearBounceTimeout();
+        };
+
+        var isContactVisible = function () {
+          if (!contactSection) {
+            return false;
+          }
+          var rect = contactSection.getBoundingClientRect();
+          return rect.top < window.innerHeight && rect.bottom > 0;
+        };
+
+        var onScrollStopped = function () {
+          scrollTimer = null;
+          if (window.scrollY > window.innerHeight && !isContactVisible()) {
+            showButton();
+          } else {
+            hideButton();
+          }
+        };
+
+        var handleScroll = function () {
+          if (scrollTimer) {
+            clearTimeout(scrollTimer);
+            scrollTimer = null;
+          }
+
+          if (isContactVisible()) {
+            hideButton();
+            return;
+          }
+
+          hideButton();
+          scrollTimer = setTimeout(onScrollStopped, delay);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleScroll);
+        window.addEventListener('mousemove', function (event) {
+          if (!event) {
+            return;
+          }
+          var distanceFromBottom = window.innerHeight - event.clientY;
+          var shouldRest = distanceFromBottom <= proximityThreshold;
+          if (shouldRest !== isPointerNearBottom) {
+            isPointerNearBottom = shouldRest;
+            if (supportsAnimate) {
+              if (isPointerNearBottom) {
+                clearBounceTimeout();
+                contactWrapper.style.transform = 'translateY(0)';
+              } else if (isVisible) {
+                clearBounceTimeout();
+                bounceTimeout = setTimeout(triggerBounce, 100);
+              }
+            }
+          }
+        });
+        handleScroll();
+
+        contactBtn.addEventListener('click', function () {
+          hideButton();
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      })();
     </script>
     <script>
       /*Toggle dropdown list*/
