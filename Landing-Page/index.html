@@ -73,14 +73,15 @@
       @media (max-width: 600px) {
 
         .background {
-          height: 125vh;
           background: url('./fruit4-mobile.webp') no-repeat fixed, linear-gradient(90deg, #D54233 0%, #E0CC4C 100%);
           background-size: 150% auto;
         }
 
         @supports (height: 100svh) {
-          .white-border-rendering-fix {
-            transform: translateY(calc((100svh - 100vh) - 5rem));
+          
+          .banner {
+            min-height: unset;
+            height: calc(100svh - 100px);
           }
         }
 
