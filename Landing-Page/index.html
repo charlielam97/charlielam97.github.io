@@ -73,8 +73,15 @@
       @media (max-width: 600px) {
 
         .background {
+          height: 125vh;
           background: url('./fruit4-mobile.webp') no-repeat fixed, linear-gradient(90deg, #D54233 0%, #E0CC4C 100%);
           background-size: 150% auto;
+        }
+
+        @supports (height: 100svh) {
+          .white-border-rendering-fix {
+            transform: translateY(calc((100svh - 100vh) - 5rem));
+          }
         }
 
       }
@@ -142,7 +149,7 @@
         </div>
       </div>
     </div>
-    <div class="relative -mt-12 lg:-mt-24">
+    <div class="white-border-rendering-fix -mt-12 lg:-mt-24">
       <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -161,7 +168,7 @@
         </g>
       </svg>
     </div>
-    <section id="sa-funkar-det" class="bg-white border-b py-8">
+    <section id="sa-funkar-det" class="white-border-rendering-fix bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Så funkar det
@@ -211,7 +218,7 @@
         </div>
       </div>
     </section>
-  <section id="maten" class="bg-white border-b py-8">
+  <section id="maten" class="white-border-rendering-fix bg-white border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           MATEN
@@ -273,7 +280,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-gray-100 py-8">
+    <section class="white-border-rendering-fix bg-gray-100 py-8">
       <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Pricing
@@ -347,10 +354,10 @@
       </div>
     </section>
     <!-- Change the colour #f8fafc to match the previous section colour -->
-    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg class="white-border-rendering-fix wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-          <g class="wave" fill="#f8fafc">
+          <g class="wave" fill="#f3f4f6">
             <path
               d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
             ></path>
@@ -374,21 +381,21 @@
           Kontakt
         </h1>
         <div class="mx-auto mb-10 h-1 w-24 rounded-full bg-[#f3b042]"></div>
-        <div class="w-full max-w-xl mx-auto flex flex-col gap-5 px-8 py-10 rounded-3xl border border-[#f7c948] bg-white/95 shadow-xl backdrop-blur">
-          <a class="group flex items-center gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-6 py-5 text-left font-bold text-gray-800 text-xl sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="tel:070-8478837">
-            <span class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
+        <div class="w-full max-w-xl mx-auto flex flex-col gap-5 px-6 sm:px-8 py-8 sm:py-10 rounded-3xl border border-[#f7c948] bg-white/95 shadow-xl backdrop-blur">
+          <a class="group flex items-center gap-4 sm:gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-5 sm:px-6 py-4 sm:py-5 text-left font-bold text-gray-800 text-lg sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="tel:070-8478837">
+            <span class="flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
               <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
             </span>
             <span>070-8478837</span>
           </a>
-          <a class="group flex items-center gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-6 py-5 text-left font-bold text-gray-800 text-xl sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="mailto:info@fruktinvest.se?subject=jag vill ha frukt&body=Jag vill ha mer frukt">
-            <span class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
+          <a class="group flex items-center gap-4 sm:gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-5 sm:px-6 py-4 sm:py-5 text-left font-bold text-gray-800 text-lg sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="mailto:info@fruktinvest.se?subject=jag vill ha frukt&body=Jag vill ha mer frukt">
+            <span class="flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
               <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
             </span>
             <span>info@fruktinvest.se</span>
           </a>
-          <a class="group flex items-center gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-6 py-5 text-left font-bold text-gray-800 text-xl sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="https://www.facebook.com/profile.php?id=100066737714415" target="_blank" rel="noopener noreferrer">
-            <span class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
+          <a class="group flex items-center gap-4 sm:gap-5 rounded-2xl border border-transparent bg-[#fff4e6] px-5 sm:px-6 py-4 sm:py-5 text-left font-bold text-gray-800 text-lg sm:text-2xl transition-all duration-200 hover:border-[#f3b042] hover:bg-white hover:text-[#d54233]" href="https://www.facebook.com/profile.php?id=100066737714415" target="_blank" rel="noopener noreferrer">
+            <span class="flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#fee0d3] text-[#d54233] transition-colors duration-200 group-hover:bg-[#d54233] group-hover:text-white">
               <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
             </span>
             <span>Fruktinvest.se</span>
